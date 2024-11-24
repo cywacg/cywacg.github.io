@@ -6,20 +6,46 @@
   <title>次元W网址发布页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="cywacg">
-  <meta name="description" content="次元W网址发布页">
-  <meta name="keywords" content="cywacg">
-  <link rel="stylesheet" href="https://cywacg.github.io/css/style.css">
+  <meta name="description" content="次元W，是.一个以ACG及相关资源交流分享为主的二刺螈网站，愿大家能在这里寻找到属于自己的次元">
+  <meta name="keywords" content="次元w,次元W官网,次元W最新地址,发布页,次元wApp下载,次元w软件下载">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
-      <img src="https://img.qwq.nz/images/2024/04/16/949bb70ec8946643b7763886fbb75db8.jpg" alt="次元W">
-      <h1>次元W</h1>
-      <h2>https://cywacg.moe</h2>
-      <p>若无法访问，请使用微软、谷歌、火狐浏览器</p>
-      <a class="button" href="https://cywacg.moe" target="_blank">点击访问</a>
+    <div class="background">
+        <!-- 背景图片列表 -->
+        <img src="https://img.qwq.nz/images/2024/11/24/9d3c6b884a643a54afc992432b5291f3.webp" loading="lazy">
+        <img src="https://img.qwq.nz/images/2024/11/24/d4da21e261e3fcdfc19b371bbdd2e6cd.webp" loading="lazy">
+        <img src="https://img.qwq.nz/images/2024/11/24/074ebce97559a345acb7692b6364c4df.webp" loading="lazy">
+        <img src="https://img.qwq.nz/images/2024/11/24/d4593e09393ce36b8a488bcafcd143b7.webp" loading="lazy">
+        <img src="https://img.qwq.nz/images/2024/11/24/352d0cf8d25fbd46a47060afacf66497.webp" loading="lazy">
     </div>
-  </div>
+    <div class="container">
+        <h1>欢迎访问次元W发布页面！</h1>
+        
+        <p>(。・∀・)ノ这里是次元W的网址发布页面，在这里您可以获取我们网站的最新域名，请保存收藏我们的页面防止迷路，点击下面的按钮跳转到我们的主站。</p>
+        <a href="https://cccyyw.us" class="button">前往主站</a>
+    </div>
+
+    <script>
+        // 获取所有背景图片
+        const images = document.querySelectorAll('.background img');
+        let currentIndex = 0;
+
+        // 延迟使第一张图也有动画效果
+        setTimeout(() => {
+            images[currentIndex].classList.add('active'); // 延迟添加 active 类，启动动画
+        }, 10);
+
+        // 定时切换图片
+        setInterval(() => {
+            // 当前图片移除 active
+            images[currentIndex].classList.remove('active');
+            // 切换到下一张图片
+            currentIndex = (currentIndex + 1) % images.length;
+            // 下一张图片添加 active
+            images[currentIndex].classList.add('active');
+        }, 5000); // 每5秒切换一次
+    </script>
 </body>
 </html>
