@@ -1,71 +1,126 @@
-/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}/*# sourceMappingURL=normalize.min.css.map */
+/* styles.css */
 
-* {
-  box-sizing: border-box;
+/* 全屏设置 */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
 }
 
-html,
-body {
-  height: 100%;
+/* 背景图片容器 */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
 }
 
+.background img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1); /* 初始比例为1 */
+    transition: opacity 1.5s ease, transform 8s ease; /* 平滑切换效果 */
+    will-change: opacity, transform; /* 提升性能 */
+}
+
+.background img.active {
+    opacity: 1;
+    transform: scale(1.05); /* 慢慢放大到1.05倍 */
+}
+
+/* 内容容器样式 */
 .container {
-  margin: auto;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-  line-height: 1.4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f9f9;
-  height: 100%;
+    position: relative;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    z-index: 2;
 }
 
-.card {
-  background: #fff;
-  background-size: contain;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px -5px rgba(60, 60, 60, 0.2);
-  text-align: center;
-  padding: 30px 60px;
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
 }
-.card img {
-  background-color: #dddfe6;
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  margin: auto auto 15px;
-  display: block;
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 30px;
 }
-.card h1 {
-  font-size: 22px;
-  margin: 10px auto 0;
-  letter-spacing: 1px;
+
+.button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.card h2 {
-  margin: auto;
-  color: #b1b6c6;
-  font-weight: 300;
-  font-size: 14px;
+
+.button:hover {
+    background-color: #e0533d;
+    transform: translateY(-2px);
 }
-.card .button {
-  display: block;
-  text-decoration: none;
-  background: #3b70fc;
-  color: #f9f9f9;
-  padding: 12px;
-  border: none;
-  border-radius: 25px;
-  margin-top: 30px;
-  font-size: 16px;
-  font-weight: 700;
-  min-width: 200px;
-  transition: 0.2s;
+
+.button:active {
+    transform: translateY(0);
 }
-.card .button span {
-  font-size: 20px;
-  line-height: 1;
-  vertical-align: top;
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button {
+        font-size: 0.9rem;
+        padding: 12px 24px;
+    }
+
+    .container {
+        padding: 20px;
+    }
 }
-.card .button:hover {
-  background: #1856fb;
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+
+    .container {
+        padding: 15px;
+    }
 }
