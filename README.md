@@ -8,7 +8,7 @@
 <br>
 <p>历史域名:</p>
 <ul>
-  <li>jigenw.com  (该域名已弃用)</li>
+  <li>jigenw.com  </li>
   <li>ciyuanvv.com  (该域名已弃用)</li>
   <li>cccyyw.us     (该域名已弃用)</li>
   <li>cywacg.com    (该域名已弃用)</li>
