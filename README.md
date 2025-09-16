@@ -3,11 +3,12 @@
 <a href="https://cywacg.github.io">https://cywacg.github.io</a>
 </p>
 <p>当前域名：</p>
-<a href="https://cywacg.club">cywacg.club</a>
+<a href="https://cywacg.cc">cywacg.cc</a>
 <br>
 <br>
 <p>历史域名:</p>
 <ul>
+  <li>cywacg.club    (该域名已弃用)</li>
   <li>jigenw.com    (该域名已弃用)</li>
   <li>ciyuanvv.com  (该域名已弃用)</li>
   <li>cccyyw.us     (该域名已弃用)</li>
