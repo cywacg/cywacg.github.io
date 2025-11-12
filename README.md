@@ -3,7 +3,7 @@
 <a href="https://cywacg.github.io">https://cywacg.github.io</a>
 </p>
 <p>当前域名：</p>
-<a href="https://cywacg.one">cywacg.one</a>
+<a href="https://cywacg.cv">cywacg.cv</a>
 <br>
 <br>
 <p>历史域名:</p>
