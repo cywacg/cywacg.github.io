@@ -6,13 +6,4 @@
 <a href="https://cywacg.cv">cywacg.cv</a>
 <br>
 <br>
-<p>历史域名:</p>
-<ul>
-   <li>cywacg.one    (该域名已弃用)</li>
-  <li>cywacg.club    (该域名已弃用)</li>
-  <li>jigenw.com    (该域名已弃用)</li>
-  <li>ciyuanvv.com  (该域名已弃用)</li>
-  <li>cccyyw.us     (该域名已弃用)</li>
-  <li>cywacg.com    (该域名已弃用)</li>
-  <li>cywacg.moe</li>
-</ul>
+
