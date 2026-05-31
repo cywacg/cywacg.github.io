@@ -1,12 +1,13 @@
-/* styles.css */
-
 /* 全屏设置 */
 html, body {
-    height: 100%; /* 必须有，且父级必须是100% */
+    height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center;     /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* 背景图片容器 */
@@ -26,28 +27,29 @@ html, body {
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    transform: scale(1); /* 初始比例为1 */
-    transition: opacity 1.5s ease, transform 8s ease; /* 平滑切换效果 */
-    will-change: opacity, transform; /* 提升性能 */
+    transform: scale(1);
+    transition: opacity 1.5s ease, transform 8s ease;
+    will-change: opacity, transform;
 }
 
 .background img.active {
     opacity: 1;
-    transform: scale(1.05); /* 慢慢放大到1.05倍 */
+    transform: scale(1.05);
 }
 
-
+/* 内容容器 */
 .container {
-    
-    
-    /* 保持以下原有样式 */
     text-align: center;
     padding: 50px 30px;
     background: rgba(20, 20, 25, 0.75);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    box-shadow: 0 15px 40px rgba(0,
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+}
 
 h1 {
     font-size: 2.5rem;
@@ -63,10 +65,9 @@ p {
     margin-bottom: 30px;
 }
 
-/* 按钮：调整为更符合次元W气质的颜色 */
 .button {
-    background: linear-gradient(135deg, #ff99cc, #ff6699); /* 优雅的粉色渐变 */
-    color: #fff;
+    background: linear-gradient(135deg, #ff99cc, #ff6699);
+    color: white;
     padding: 16px 40px;
     font-size: 1.1rem;
     text-decoration: none;
@@ -89,39 +90,15 @@ p {
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-
-    p {
-        font-size: 0.9rem;
-    }
-
-    .button {
-        font-size: 0.9rem;
-        padding: 12px 24px;
-    }
-
-    .container {
-        padding: 20px;
-    }
+    h1 { font-size: 2rem; }
+    p { font-size: 0.9rem; }
+    .button { font-size: 0.9rem; padding: 12px 24px; }
+    .container { padding: 20px; }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
-    .button {
-        font-size: 0.8rem;
-        padding: 10px 20px;
-    }
-
-    .container {
-        padding: 15px;
-    }
+    h1 { font-size: 1.8rem; }
+    p { font-size: 0.8rem; }
+    .button { font-size: 0.8rem; padding: 10px 20px; }
+    .container { padding: 15px; }
 }
