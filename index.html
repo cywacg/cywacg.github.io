@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -10,45 +10,33 @@
   <meta name="keywords" content="次元W,次元W社区,动漫资源,同好交流,ACG资讯,最新域名发布">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-
 <body>
     <div class="background">
-        <!-- 背景图片列表 -->
         <img src="https://img.qwq.nz/images/2024/11/24/9d3c6b884a643a54afc992432b5291f3.webp" loading="lazy">
         <img src="https://img.qwq.nz/images/2024/11/24/d4da21e261e3fcdfc19b371bbdd2e6cd.webp" loading="lazy">
         <img src="https://img.qwq.nz/images/2024/11/24/074ebce97559a345acb7692b6364c4df.webp" loading="lazy">
         <img src="https://img.qwq.nz/images/2024/11/24/d4593e09393ce36b8a488bcafcd143b7.webp" loading="lazy">
         <img src="https://img.qwq.nz/images/2024/11/24/352d0cf8d25fbd46a47060afacf66497.webp" loading="lazy">
-    <div class="container">
-    <h1>欢迎抵达次元W · 时空补给站</h1>
-    
-    <p>
-        (。・∀・)ノ 坐标已校准！这里是次元W最新域名的唯一发布点。为防止在维度穿越中走丢，请务必将此页面加入浏览器书签哦。<br>
-        <small style="color: #999; font-size: 0.8rem;">(若跳转异常，建议清理缓存或使用无痕模式访问)</small>
-    </p>
+    </div>
 
-    <a href="https://wacg.xyz" class="button">开启连接：进入次元W</a>
-</div>
+    <div class="container">
+        <h1>欢迎抵达次元W · 时空补给站</h1>
+        <p>
+            (。・∀・)ノ 坐标已校准！这里是次元W最新域名的唯一发布点。为防止在维度穿越中走丢，请务必将此页面加入浏览器书签哦。<br>
+            <small style="color: #999; font-size: 0.8rem;">(若跳转异常，建议清理缓存或使用无痕模式访问)</small>
+        </p>
+        <a href="https://wacg.xyz" class="button">开启连接：进入次元W</a>
+    </div>
 
     <script>
-        // 获取所有背景图片
         const images = document.querySelectorAll('.background img');
         let currentIndex = 0;
-
-        // 延迟使第一张图也有动画效果
-        setTimeout(() => {
-            images[currentIndex].classList.add('active'); // 延迟添加 active 类，启动动画
-        }, 10);
-
-        // 定时切换图片
+        setTimeout(() => { images[currentIndex].classList.add('active'); }, 10);
         setInterval(() => {
-            // 当前图片移除 active
             images[currentIndex].classList.remove('active');
-            // 切换到下一张图片
             currentIndex = (currentIndex + 1) % images.length;
-            // 下一张图片添加 active
             images[currentIndex].classList.add('active');
-        }, 5000); // 每5秒切换一次
+        }, 5000);
     </script>
 </body>
 </html>
