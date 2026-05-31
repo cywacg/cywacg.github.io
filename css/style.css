@@ -1,16 +1,20 @@
-/* 全屏设置 */
+/* ==========================================================================
+   次元W - 基础样式配置
+   ========================================================================== */
+
+/* 全屏设置 - 利用 Flexbox 实现垂直水平居中 */
 html, body {
     height: 100%;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 背景图片容器 */
+/* 背景图片容器 - 固定定位，始终铺满全屏 */
 .background {
     position: fixed;
     top: 0;
@@ -37,7 +41,7 @@ html, body {
     transform: scale(1.05);
 }
 
-/* 内容容器 */
+/* 内容容器 - 增加磨砂玻璃特效 (Backdrop Filter) */
 .container {
     text-align: center;
     padding: 50px 30px;
@@ -49,8 +53,10 @@ html, body {
     width: 90%;
     max-width: 500px;
     z-index: 2;
+    animation: fadeIn 1s ease-out; /* 入场动效 */
 }
 
+/* 标题样式 */
 h1 {
     font-size: 2.5rem;
     font-weight: bold;
@@ -58,6 +64,7 @@ h1 {
     color: #fff;
 }
 
+/* 段落样式 */
 p {
     font-size: 1rem;
     line-height: 1.6;
@@ -65,6 +72,7 @@ p {
     margin-bottom: 30px;
 }
 
+/* 按钮样式 - 渐变风格 */
 .button {
     background: linear-gradient(135deg, #ff99cc, #ff6699);
     color: white;
@@ -79,7 +87,7 @@ p {
 }
 
 .button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) rotate(1deg); /* 微微动效增加傲娇感 */
     box-shadow: 0 8px 25px rgba(255, 102, 153, 0.6);
     filter: brightness(1.1);
 }
@@ -88,7 +96,13 @@ p {
     transform: translateY(0);
 }
 
-/* 响应式设计 */
+/* 入场动画定义 */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 响应式设计 - 针对手机屏幕适配 */
 @media (max-width: 768px) {
     h1 { font-size: 2rem; }
     p { font-size: 0.9rem; }
