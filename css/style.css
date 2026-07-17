@@ -116,3 +116,30 @@ p {
     .button { font-size: 0.8rem; padding: 10px 20px; }
     .container { padding: 15px; }
 }
+
+/* 邮箱公告栏样式 - 匹配磨砂玻璃风格 */
+.email-notice-box {
+    margin-top: 25px;
+    padding: 18px;
+    background: rgba(255, 255, 255, 0.08); /* 半透明底色，符合磨砂玻璃感 */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.email-notice-box a {
+    color: #ff99cc; /* 使用你按钮同系的粉色 */
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #ff99cc;
+}
+
+.notice-subtext {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #aaa;
+}
